@@ -1,0 +1,75 @@
+/* Importing the fonts from Google Fonts API */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Roboto:wght@400;700&family=Pacifico&display=swap');
+
+/* Defining CSS variables */
+:root {
+  /* Color palette */
+  --primary-color: #007BFF;  /*  A shade of blue */
+  --secondary-color: #6c757d; /*  A shade of gray */
+  --accent1-color: #c7edd0;  /*  A shade of green */
+  --accent2-color: #ffc107; /*  A shade of yellow/gold */
+
+  /* Typography */
+  --heading-font: 'Raleway', sans-serif;
+  --paragraph-font: 'Roboto', sans-serif;
+
+  /* Navigation */
+  --nav-background-color: #343a40; /*  A darker shade of gray */
+  --nav-link-color: #ffffff; /* White color for better contrast with dark background */
+  --nav-hover-link-color: #007BFF; /* Shade of blue to indicate hover on navigation link */
+  --nav-hover-background-color: #495057; /* Slightly lighter shade of dark gray for hover background */
+}
+
+body {
+    font-family: var(--paragraph-font);
+    max-width: 960px;
+    padding: 20px;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+  } 
+  
+  header {
+    padding: 20px;
+    background-color: var(--accent1-color);
+  }
+
+  p {
+    padding: 25px;
+  }
+
+  nav {
+    background-color: var(--nav-background-color);
+    font-size: 1.2rem;
+    display: flex;
+  }
+  
+  nav a {
+    display: block;
+    color: var(--nav-link-color);
+    text-decoration: none;
+    padding: 1rem;
+  }
+  
+  nav a:link, nav a:visited {
+    color: var(--nav-link-color);
+  }
+  
+  nav a:hover {
+    color: var(--nav-hover-link-color);
+    background-color: var(--nav-hover-background-color);
+  }
+/* 
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.callout-box {
+    font-family: 'Pacifico', cursive;
+} */
