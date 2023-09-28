@@ -1,35 +1,53 @@
+* {
+    margin: 1px;
+    margin-inline-start: 3px;
+    margin-inline-end: 3px;
+    padding: 3px;
+    box-sizing: border-box;
+  }
+
 nav {
     background-color: steelblue;
     padding: 10px;
+    /* border-radius: 8%; */
 }
 nav a {
     color: white;
     display: block;
     padding: 20px;
+    text-decoration: wavy;
 }
 main {
     max-width: 840px;
 }
 h1 {
     color: steelblue;
+    padding: 3%;
 }
 main img {
     width: 150px;
     height: auto;
     border: 1px solid steelblue;
+    border-radius: 5%;
     padding: 2px;
     box-shadow: 0 0 30px gray;
+    float: right;
+    margin-inline-end: 8%;
+    
 }
 p {
-    padding: 0;
+    margin-left: 8%;
+    /* padding: 8%; */
 }
 aside {
-    margin: 1em;
+    /* margin: 1em; */
     border: 1px solid rgba(0, 0, 0, 0.2);
     background-color: #eee;
     color: #333;
     text-align: center;
+    width: 20em;
 }
+
 aside img {
     width: 200px;
     height: auto;
@@ -38,4 +56,17 @@ footer {
     margin-top: 1em;
     border-top: 1px solid #000;
     text-align: center;
+}
+
+/* Class Selectors */
+.box {
+    margin: 1rem;
+    border: 1px solid rgba(0,0,0,.1);
+    padding: 1rem;
+    background-color: #ddd;
+    color: #000;
+    /* border-radius: 5%; */
+  }
+.box, a {
+    text-decoration: wavy;
 }
