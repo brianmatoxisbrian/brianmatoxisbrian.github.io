@@ -7,22 +7,23 @@
   }
 
 nav {
-    background-color: steelblue;
-    padding: 10px;
+    /* background-color: steelblue;
+    padding: 10px; */
     /* border-radius: 8%; */
 }
-nav a {
+/* nav a {
     color: white;
     display: block;
     padding: 20px;
     text-decoration: wavy;
-}
+} */
 main {
-    max-width: 1024px;
+    /* max-width: 1024px; */
 }
 h1 {
     color: steelblue;
     padding: 3%;
+    border-bottom: 1px solid steelblue;
 }
 main img {
     width: 150px;
@@ -70,3 +71,44 @@ footer {
 .box, a {
     text-decoration: wavy;
 }
+
+
+/* W04: Using CSS Flex and Grid on the Course Home Page */
+header, .grid, footer {
+    max-width: 840px;
+    margin: 0 auto;
+  }
+  nav {
+    background-color: steelblue;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  nav a {
+    display: block;
+    padding: 0.5rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff; 
+  }
+
+  /* Use grid-template-columns to define the columns and their widths.
+    Use grid-column and grid-row to define the grid items (main and aside) position. */
+  .grid {
+    display: grid;
+    align-items: center;
+  }
+  
+  main {
+    grid-column: 2/3;
+    margin: 1rem;
+  }
+  
+  aside {
+    width: 16rem;
+    position: relative;
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
