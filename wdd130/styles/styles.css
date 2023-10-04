@@ -17,6 +17,9 @@ nav {
     padding: 20px;
     text-decoration: wavy;
 } */
+header{
+    align-items: center;
+}
 main {
     /* max-width: 1024px; */
 }
