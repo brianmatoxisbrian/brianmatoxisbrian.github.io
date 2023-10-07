@@ -1,124 +1,303 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Roboto:wght@400;700&family=Pacifico&display=swap');
+
 /* Importing the fonts from Google Fonts API */
 /* Defining CSS variables */
 :root {
   /* Color palette */
-  --primary-color: #007BFF;  /*  A shade of blue */
-  --secondary-color: #6c757d; /*  A shade of gray */
-  --accent1-color: #c7edd0;  /*  A shade of green */
-  --accent2-color: #ffc107; /*  A shade of yellow/gold */
+  --primary-color: #007BFF;
+  /*  A shade of blue */
+  --secondary-color: #6c757d;
+  /*  A shade of gray */
+  --accent1-color: #c7edd0;
+  /*  A shade of green */
+  --accent2-color: #ffc107;
+  /*  A shade of yellow/gold */
 
-  --accent2-color-r: 255; 
-  --accent2-color-g: 193; 
-   --accent2-color-b: 7;  
+  --accent2-color-r: 255;
+  --accent2-color-g: 193;
+  --accent2-color-b: 7;
   /* Typography */
   --heading-font: 'Raleway', sans-serif;
   --paragraph-font: 'Roboto', sans-serif;
 
   /* Navigation */
-  --nav-background-color: #343a40; /*  A darker shade of gray */
-  --nav-link-color: #ffffff; /* White color for better contrast with dark background */
-  --nav-hover-link-color: #007BFF; /* Shade of blue to indicate hover on navigation link */
-  --nav-hover-background-color: #495057; /* Slightly lighter shade of dark gray for hover background */
+  --nav-background-color: #6aaef3;
+  /*  A darker shade of gray */
+  --nav-link-color: #ffffff;
+  /* White color for better contrast with dark background */
+  --nav-hover-link-color: #007BFF;
+  /* Shade of blue to indicate hover on navigation link */
+  --nav-hover-background-color: #c6d7e7;
+  /* Slightly lighter shade of dark gray for hover background */
 }
 
 body {
-    font-family: var(--paragraph-font);
-    max-width: 960px;
-    padding: 20px;
-  }
+  font-family: var(--paragraph-font);
+  /* max-width: 960px; */
+  max-width: 100%;
+  padding: 20px;
+}
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: var(--heading-font);
-    color: var(--primary-color);
-  } 
-  h1{
-    position: absolute;
-    z-index: 9;
-    transform: translateY(-250px);
-  }
-  
-  header {
-    padding: 20px;
-    background-color: var(--accent1-color);
-  }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+}
 
-  p {
-    padding: 25px;
-  }
+h1 {
+  position: absolute;
+  z-index: 9;
+  transform: translateY(-250px);
+}
 
-  nav {
-    background-color: var(--nav-background-color);
-    font-size: 1.2rem;
-    display: flex;
-  }
+header {
+  padding: 20px;
+  /* background-color: var(--accent1-color); */
+  background-color: var(--nav-background-color);
+  /* week04 */
+  margin: 1rem auto;
+  display: grid;
+  grid-template-columns: 120px 1fr 2fr;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  /* max-width: 1000px; */
+  max-width: 100%;
+  justify-content: space-between; 
+}
+
+header img {
+	margin: 0 0.25rem 0 1rem;
+	width: 100px;
+	height: auto;
+  border-radius: 10%;
+}
+
+p {
+  padding: 25px;
+}
+
+/* nav {
+  background-color: var(--nav-background-color);
+  font-size: 1.2rem;
+  display: flex;
+  border-radius: 4%;
+  text-align: right;
+}
+
+nav a {
+  display: block;
+  color: var(--nav-link-color);
+  text-decoration: none;
+  padding: 1rem;
+}
+
+nav a:link,
+nav a:visited {
+  color: var(--nav-link-color);
+}
+
+nav a:hover {
+  color: var(--nav-hover-link-color);
+  background-color: var(--nav-hover-background-color);
+} */
+
+/* week04 */
+.navigation {
+	display: flex;
+	list-style: none;
+  /* background-color: var(--nav-background-color); */
+  border-radius: 5%;
+}
+
+.navigation li {
+	flex: 1 1 100%;
   
-  nav a {
-    display: block;
-    color: var(--nav-link-color);
-    text-decoration: none;
-    padding: 1rem;
-  }
-  
-  nav a:link, nav a:visited {
-    color: var(--nav-link-color);
-  }
-  
-  nav a:hover {
-    color: var(--nav-hover-link-color);
-    background-color: var(--nav-hover-background-color);
-  }
-  .hero {
-    background-image: url('../images/background.jpg');
-    background-size: cover; /* This ensures the background image covers the entire element */
-    background-repeat: no-repeat; /* Ensures the image doesn't repeat */
-    background-position: center; /* Centers the background image */
-    position: relative; 
-    height: 600px;  
-    display: flex;
-    /*flex-direction: column;
+}
+
+.navigation a {
+	display: block;
+	color: var(--nav-link-color);
+	padding: 20px;
+	text-decoration: none;
+}
+
+.navigation a:hover {
+	color: var(--nav-hover-link-color);
+	font-weight: 700;
+	/* text-decoration: underline; */
+  background-color: var(--nav-hover-background-color);
+  border-radius: 5%;
+}
+
+.hero {
+  background-image: url('../images/background.jpg');
+  background-size: cover;
+  /* This ensures the background image covers the entire element */
+  background-repeat: no-repeat;
+  /* Ensures the image doesn't repeat */
+  background-position: center;
+  /* Centers the background image */
+  position: relative;
+  height: 600px;
+  display: flex;
+  /*flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 
 }
+
 /* .hero, article, p{
     padding-top: -100px;
 } */
-  .hero img {
-    display: block;
-    width: 40%;
-    height: 36%;
-  }
-  article{
-    position: absolute;
-    /* opacity: 0.8; */
-    background-color: rgba(var(--accent2-color-r), var(--accent2-color-g), var(--accent2-color-b), 0.4);
-  }
-  article img{
-    float: right;
-  }
-  /* section{
-    padding-top: 1rem;
-  } */
-  footer {
-    display: flex;
-    justify-content: space-between; 
-    align-items: center; 
-    flex-wrap: wrap; 
+.hero img {
+  display: block;
+  width: 40%;
+  height: 36%;
+}
+
+article {
+  position: absolute;
+  /* opacity: 0.8; */
+  background-color: rgba(var(--accent2-color-r), var(--accent2-color-g), var(--accent2-color-b), 0.4);
+}
+
+article img {
+  float: right;
+}
+
+/* week 04 */
+section h2 {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+section h2::after {
+  content: "";
+  display: block;
+  height: 20px;
+  background-color:rgba(var(--accent2-color-r), var(--accent2-color-g), var(--accent2-color-b), 0.4);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+section h2 span {
+  background-color: rgba(var(--accent2-color-r), var(--accent2-color-g), var(--accent2-color-b), 0.4);
+  padding: 0 20px;
+  position: relative;
+  z-index: 2;
+}
+section p {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: left;
+}
+
+section p img {
+  width: 35%; 
+  height: auto;
+  margin: 0 20px; /* add space around the image */
+}
+
+/* Adventure Section */
+.adventure-gallery {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px; /* Ensure there's a gap between images */
+}
+
+figure {
+  margin: 0;/* Resets default figure margin */
+}
+
+figcaption {
+  text-align: center;
+  margin-top: 8px;
+  font-size: 0.9em;
+  color: var(--secondary-color);
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+
+
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  background-color: var(--nav-background-color); /* or choose another appropriate variable/color */
+  color: var(--nav-link-color);
 }
 
 .sociallinks {
-    display: flex; 
-    gap: 20px;
+  display: flex;
+  gap: 20px;
 }
 
-/* You can adjust the width of social images if they appear too big */
+/* Adjust the width of social images*/
 .sociallinks img {
-    width: 24px; 
-    height: 24px;
+  width: 24px;
+  height: 24px;
+}
+
+/* week 04 */
+/* Hisory Section */
+@media only screen and (max-width: 768px) {
+  section p {
+    flex-direction: column;
+  }
+  section p img {
+    width: 100%;
+    margin: 20px 0; /* adjust as needed */
+  }
+}
+
+/* Adventure Section  */
+@media only screen and (max-width: 768px) {
+  .adventure-gallery {
+      grid-template-columns: repeat(2, 1fr);
+      /* Two images per row on smaller screens */
+  }
+}
+
+/* Footer */
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .sociallinks {
+    order: -1; /* This makes the social links appear above the copyright text on small screens */
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 769px) {
+  footer p {
+    margin: 0;
+  }
+
+  .sociallinks {
+    margin-left: auto;
+  }
 }
