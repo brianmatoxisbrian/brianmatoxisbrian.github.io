@@ -137,7 +137,7 @@ section p img {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
-  /*padding: bottom 16px;*/
+  padding-bottom: 16px;
   
 }
 
